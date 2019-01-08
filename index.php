@@ -6,7 +6,7 @@ $config = new s9e\TextFormatter\Configurator();
 
 $config->enableJavaScript();
 
-$config->javascript->exports = ['parse'];
+$config->javascript->exports = ['preview'];
 
 $config->rootRules->enableAutoLineBreaks();
 
