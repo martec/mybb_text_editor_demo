@@ -163,7 +163,7 @@ function extrabutreq(list,type,qse_area) {
 }
 $(document).ready(function() {
 	function genbuttons(qse_area) {
-		$(toolbar(qse_area)).insertBefore("#"+qse_area+"");
+		$(toolbar(qse_area)).insertBefore("textarea[name="+qse_area+"]");
 		buttons(qse_area);
 		$('#yuieditor-font_'+qse_area+'').popupMenu();
 		$('#yuieditor-size_'+qse_area+'').popupMenu();
@@ -175,7 +175,7 @@ $(document).ready(function() {
 		$('#yuieditor-emoticons_'+qse_area+'').popupMenu(false);
 	};
 	function geneditor(qse_area) {
-		document.getElementById(qse_area).style.width = '99.5%';
+		document.getElementsByName(qse_area)[0].style.width = '99.5%';
 		genbuttons(qse_area);
 		setTimeout(function() {
 			$('.color_palette_placeholder_'+qse_area).each(function() {
@@ -183,8 +183,8 @@ $(document).ready(function() {
 			});
 		},400);
 	};	
-	if ($('#message').length) {
-		geneditor('message');
+	if ($('textarea[name=raw]').length) {
+		geneditor('raw');
 	}
 	if ($('#signature').length) {
 		geneditor('signature');
