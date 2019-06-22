@@ -110,7 +110,7 @@ editor = (function() {
  			return true;
  		},
  		insert_text: function(d, h, i) {
- 			var g, f, e = document.getElementById(i);
+ 			var g, f, e = document.getElementsByName(i)[0];
  			if (!e) {
  				return false;
  			}
