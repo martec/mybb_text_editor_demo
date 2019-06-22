@@ -176,7 +176,7 @@ $(document).ready(function() {
 	};
 	function geneditor(qse_area) {
 		document.getElementsByName(qse_area)[0].style.width = '99.5%';
-		document.getElementsByName(qse_area)[0].style.height = '300px';
+		document.getElementsByName(qse_area)[0].style.height = '200px';
 		genbuttons(qse_area);
 		setTimeout(function() {
 			$('.color_palette_placeholder_'+qse_area).each(function() {
