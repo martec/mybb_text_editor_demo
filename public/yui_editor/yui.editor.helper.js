@@ -81,13 +81,13 @@ function fontbutgen(qse_area) {
 function fontsizebutgen(qse_area) {
 	return	'<a class="yuieditor-button yuieditor-button-size" id="yuieditor-size_'+qse_area+'" title="'+yuivar['Font Size']+'"><div></div></a>'+
 			'<div id="yuieditor-size_'+qse_area+'_popup" class="yuieditor-dropdown yuieditor-fontsize-picker" style="display: none;"><div>'+
-				'<a class="yuieditor-fontsize-option" onclick="descbut(\'size\',1,\'\',\'xx-small\',\'\',\''+qse_area+'\')"><font size="1">1</font></a>'+
-				'<a class="yuieditor-fontsize-option" onclick="descbut(\'size\',1,\'\',\'x-small\',\'\',\''+qse_area+'\')"><font size="2">2</font></a>'+
-				'<a class="yuieditor-fontsize-option" onclick="descbut(\'size\',1,\'\',\'small\',\'\',\''+qse_area+'\')"><font size="3">3</font></a>'+
-				'<a class="yuieditor-fontsize-option" onclick="descbut(\'size\',1,\'\',\'medium\',\'\',\''+qse_area+'\')"><font size="4">4</font></a>'+
-				'<a class="yuieditor-fontsize-option" onclick="descbut(\'size\',1,\'\',\'large\',\'\',\''+qse_area+'\')"><font size="5">5</font></a>'+
-				'<a class="yuieditor-fontsize-option" onclick="descbut(\'size\',1,\'\',\'x-large\',\'\',\''+qse_area+'\')"><font size="6">6</font></a>'+
-				'<a class="yuieditor-fontsize-option" onclick="descbut(\'size\',1,\'\',\'xx-large\',\'\',\''+qse_area+'\')"><font size="7">7</font></a>'+
+				'<a class="yuieditor-fontsize-option" onclick="descbut(\'size\',1,\'\',\'8\',\'\',\''+qse_area+'\')"><font size="1">1</font></a>'+
+				'<a class="yuieditor-fontsize-option" onclick="descbut(\'size\',1,\'\',\'10\',\'\',\''+qse_area+'\')"><font size="2">2</font></a>'+
+				'<a class="yuieditor-fontsize-option" onclick="descbut(\'size\',1,\'\',\'13\',\'\',\''+qse_area+'\')"><font size="3">3</font></a>'+
+				'<a class="yuieditor-fontsize-option" onclick="descbut(\'size\',1,\'\',\'15\',\'\',\''+qse_area+'\')"><font size="4">4</font></a>'+
+				'<a class="yuieditor-fontsize-option" onclick="descbut(\'size\',1,\'\',\'19\',\'\',\''+qse_area+'\')"><font size="5">5</font></a>'+
+				'<a class="yuieditor-fontsize-option" onclick="descbut(\'size\',1,\'\',\'26\',\'\',\''+qse_area+'\')"><font size="6">6</font></a>'+
+				'<a class="yuieditor-fontsize-option" onclick="descbut(\'size\',1,\'\',\'35\',\'\',\''+qse_area+'\')"><font size="7">7</font></a>'+
 			'</div>';
 }
 function imgbutgen(qse_area) {
@@ -218,12 +218,11 @@ $(document).ready(function() {
 		$(fontbutgen(qse_area)).appendTo('.yuieditor-group_'+qse_area+':last');
 		$(fontsizebutgen(qse_area)).appendTo('.yuieditor-group_'+qse_area+':last');
 		$(colorbutgen(qse_area)).appendTo('.yuieditor-group_'+qse_area+':last');
-		$(hrbutgen(qse_area)).appendTo('.yuieditor-group_'+qse_area+':last');
-		$(imgbutgen(qse_area)).appendTo('.yuieditor-group_'+qse_area+':last');
-		$(emailbutgen(qse_area)).appendTo('.yuieditor-group_'+qse_area+':last');
+		//$(imgbutgen(qse_area)).appendTo('.yuieditor-group_'+qse_area+':last');
+		$(simpbutgen('image','p','img',1,'',qse_area,yuivar['Insert an image'])).appendTo('.yuieditor-group_'+qse_area+':last');
+		//$(emailbutgen(qse_area)).appendTo('.yuieditor-group_'+qse_area+':last');
 		$(linkbutgen(qse_area)).appendTo('.yuieditor-group_'+qse_area+':last');
-		$(videobutgen(qse_area)).appendTo('.yuieditor-group_'+qse_area+':last');
-		$(emotbutgen(qse_area)).appendTo('.yuieditor-group_'+qse_area+':last');
+		//$(emotbutgen(qse_area)).appendTo('.yuieditor-group_'+qse_area+':last');
 		$(simpbutgen('bulletlist','t','list',3,'',qse_area,yuivar['Bullet list'])).appendTo('.yuieditor-group_'+qse_area+':last');
 		$(simpbutgen('orderedlist','o','list',4,'',qse_area,yuivar['Numbered list'])).appendTo('.yuieditor-group_'+qse_area+':last');
 		$(simpbutgen('code','g','code',1,'',qse_area,yuivar.Code)).appendTo('.yuieditor-group_'+qse_area+':last');
