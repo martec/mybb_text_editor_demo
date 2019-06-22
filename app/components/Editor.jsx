@@ -28,7 +28,7 @@ export default class Editor extends React.Component {
             <div className="ui two column divided grid container">
                 <div className="column">
                     <div className="ui input">
-                        <textarea name="raw" value={this.state.raw} onChange={this.onRawTextChanged}></textarea>
+                        <textarea id="message" name="raw" value={this.state.raw} onChange={this.onRawTextChanged}></textarea>
                     </div>
                 </div>
                 <div className="column">
